@@ -14,4 +14,9 @@
   - View the current inventory.
   - Search for items by name.
 
+## Version 1.1.1
+- 2024-10-27
+-Added bug fixes
+ - Adding items with the same name as an existing item gives a warning instead of overwriting it
+
 

@@ -8,8 +8,14 @@ def add_item(inventory, name, price, quantity):
     price (str): The price of the item
     quantity (str): The quantity of the item
     """
-    inventory[name] = {"price": price, "quantity": quantity}
-    print(f"{name} added to the inventory.")
+     #checks of there is already one of that item
+    for x in inventory:
+        if name == x:
+            print("There is already an item with that name")
+            return
+        else:
+            inventory[name] = {"price": price, "quantity": quantity}
+            print(f"{name} added to the inventory.")
 
 def remove_item(inventory, item_name):
     """
@@ -60,7 +66,7 @@ while True:
     choice = input("Enter your choice (1-5): ")
 
     if choice == "1":
-        name = input("Enter item name: ")
+        name = input("Enter item name: ")   
         price = input("Enter item price: ")
         quantity = int(input("Enter item quantity: "))
         add_item(inventory, name, price, quantity)
